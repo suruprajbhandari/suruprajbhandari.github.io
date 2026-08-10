@@ -262,6 +262,48 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--violet); outlin
   border-top: 1px solid var(--line);
 }
 
+/* Certificate detail page */
+.cert-page { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+
+.back-link { display: inline-block; margin-bottom: 2rem; color: var(--muted); font-size: 0.88rem; }
+.back-link:hover { color: var(--violet); }
+
+.cert-info { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+.cert-info h1 { font-family: var(--display); font-size: 1.5rem; font-weight: 600; }
+
+.cert-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+}
+.cert-badge.physical { background: rgba(227, 167, 46, 0.16); color: #8A6414; }
+.cert-badge.digital { background: rgba(76, 63, 224, 0.12); color: var(--violet); }
+
+.cert-frame {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem;
+  margin: 1.6rem 0;
+}
+.cert-frame img { width: 100%; display: block; border-radius: 6px; }
+.cert-frame iframe {
+  width: 100%;
+  height: 70vh;
+  min-height: 420px;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+}
+
+.cert-desc { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.8rem; }
+
+.cert-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
   html { scroll-behavior: auto; }
