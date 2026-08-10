@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate — Surup Rajbhandari</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html#top" class="mark" aria-label="Home">
+      <span class="mark-ring"></span>
+      <span class="mark-text">SR</span>
+    </a>
+  </nav>
+
+  <div class="cert-page">
+    <a class="back-link" href="../index.html#certificates">&larr; Back to certificates</a>
+
+    <div class="cert-info">
+      <span class="seal">&#10003;</span>
+      <h1 id="cert-title">Certificate Title</h1>
+      <span id="cert-badge" class="cert-badge"></span>
+    </div>
+    <p class="cert-meta" id="cert-meta">Issuer &middot; Month Year</p>
+
+    <div class="cert-frame" id="cert-frame"></div>
+
+    <p class="cert-desc" id="cert-desc"></p>
+
+    <div class="cert-actions">
+      <a id="cert-open" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Open full size &rarr;</a>
+      <a id="cert-download" class="btn btn-ghost" href="#" download>Download original</a>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!--  EDIT ONLY THIS BLOCK FOR EACH NEW CERTIFICATE, THEN SAVE     -->
+  <!--  THIS FILE AS certs/your-cert-slug.html                      -->
+  <!-- ============================================================ -->
+  <script>
+    const CERT = {
+      title: "Certificate Title",
+      issuer: "Issuer Name",
+      date: "Month Year",
+      type: "physical",   // "physical" or "digital"
+      file: "../assets/certs/example-cert.jpg", // put the scan/PDF in assets/certs/ and point here (.jpg, .png, or .pdf)
+      description: "Issued for completing [course / achievement name]. This page serves as the verifiable record for this certificate."
+    };
+  </script>
+  <!-- ============================================================ -->
+
+  <script src="cert-render.js"></script>
+</body>
+</html>
