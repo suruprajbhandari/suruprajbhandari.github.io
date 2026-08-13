@@ -1,6 +1,5 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Mobile nav toggle
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -20,24 +19,26 @@ if (navToggle && navLinks) {
   });
 }
 
-// Highlight the nav link for the section currently in view
 const sections = document.querySelectorAll("section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 
 if (sections.length && navAnchors.length && "IntersectionObserver" in window) {
   const setActive = (id) => {
-    navAnchors.forEach((a) => {
-      a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+    navAnchors.forEach((anchor) => {
+      const matches = anchor.getAttribute("href") === `#${id}`;
+      anchor.classList.toggle("active", matches);
     });
   };
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) setActive(entry.target.id);
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
       });
     },
-    { rootMargin: "-40% 0px -55% 0px" }
+    { threshold: 0.35, rootMargin: "-15% 0px -45% 0px" }
   );
 
   sections.forEach((section) => observer.observe(section));
