@@ -1,0 +1,8 @@
+# robots.txt — Surup Rajbhandari personal website
+# Allow all crawlers. No pages are blocked.
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update to reflect actual domain once DNS is live)
+Sitemap: https://suruprajbhandari.com.np/sitemap.xml

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEP &mdash; Surup Rajbhandari</title>
+  <meta name="description" content="SEP certificate issued to Surup Rajbhandari by ING Skill Academy, 2024.">
+  <meta name="author" content="Surup Rajbhandari">
+
+  <link rel="canonical" href="https://suruprajbhandari.com.np/certs/sep.html">
+
+  <meta name="theme-color" content="#0e0d0b">
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body data-page="certificates">
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../" class="nav__mark" aria-label="Surup Rajbhandari — Home">
+        <span class="nav__mark-ring"></span>
+        <span class="nav__mark-text">SR</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle"
+              aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__links" id="navLinks">
+        <a href="../"              data-page="home">Home</a>
+        <a href="../about/"        data-page="about">About</a>
+        <a href="../projects/"     data-page="projects">Projects</a>
+        <a href="../certificates/" data-page="certificates">Certificates</a>
+        <a href="../contact/"      data-page="contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Certificate detail -->
+  <main class="cert-detail page-enter">
+
+    <a class="cert-detail__back" href="../certificates/">
+      &larr; Back to certificates
+    </a>
+
+    <div class="cert-detail__shell">
+
+      <!-- Header populated by cert-render.js -->
+      <div class="cert-detail__header">
+        <div class="cert-seal" aria-hidden="true">&#10003;</div>
+        <h1 class="cert-detail__title" id="cert-title">Certificate</h1>
+        <span id="cert-badge" class="cert-badge"></span>
+      </div>
+
+      <p class="cert-detail__meta" id="cert-meta"></p>
+
+      <!-- PDF / image viewer -->
+      <div class="cert-detail__frame" id="cert-frame"></div>
+
+      <!-- Optional description (left empty — no invented content) -->
+      <p class="cert-detail__desc" id="cert-desc"></p>
+
+      <!-- Action buttons -->
+      <div class="cert-detail__actions">
+        <a id="cert-open"     class="btn btn--primary" href="#" target="_blank" rel="noopener">Open full size &rarr;</a>
+        <a id="cert-download" class="btn btn--ghost"   href="#" download>Download original</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> Surup Rajbhandari</p>
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://www.linkedin.com/in/surup-rajbhandari" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+        <a href="https://github.com/suruprajbhandari"           target="_blank" rel="noreferrer noopener">GitHub</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Certificate data — genuine details only; no invented description -->
+  <script>
+  const CERT = {
+    title:       "SEP",
+    issuer:      "ING Skill Academy",
+    date:        "2024",
+    type:        "physical",
+    file:        "../assets/certs/SEP.pdf",
+    description: ""   /* No course description added — none confirmed */
+  };
+  </script>
+
+  <!-- cert-render.js populates title, meta, badge, frame, and action links -->
+  <script src="cert-render.js"></script>
+
+  <script src="../script.js"></script>
+</body>
+</html>
